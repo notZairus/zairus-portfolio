@@ -126,3 +126,23 @@
     @apply bg-background text-foreground;
   }
 }
+
+.scroll-custom::-webkit-scrollbar {
+  width: 5px;   
+  height: 5px;
+}
+
+.scroll-custom::-webkit-scrollbar-track {
+  background: #111111;
+  border-radius: 6px;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb {
+  background-color: #51A2FF;
+  border-radius: 0px;
+  transition: all 1s ease-out;
+}
+
+.scroll-custom::-webkit-scrollbar-thumb:hover {
+  background: purple; 
+}

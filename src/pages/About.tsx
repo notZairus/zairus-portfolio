@@ -1,4 +1,79 @@
 import Dot from '@/components/Dot'
+import { SiJavascript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiShadcnui, SiFramer, SiPhp, SiLaravel, SiPython, SiFirebase, SiMysql, SiSqlite, SiFlask } from "react-icons/si";
+import SkillHoverCard from '@/components/SkillHoverCard';
+
+
+type Skill = {
+  name: string,
+  icon: React.ReactNode
+}
+
+
+const frontendSkills: Skill[] = [
+  {
+    name: 'Html',
+    icon: <SiHtml5 size={40} />
+  },
+  {
+    name: 'Css',
+    icon: <SiCss3 size={40} />
+  },
+  {
+    name: 'Javasctipt',
+    icon: <SiJavascript size={40} />
+  },
+  {
+    name: 'React',
+    icon: <SiReact size={40} />
+  },
+  {
+    name: 'TailwindCss',
+    icon: <SiTailwindcss size={40} />
+  },
+  {
+    name: 'ShadCN',
+    icon: <SiShadcnui size={40} />
+  },
+  {
+    name: 'Motion',
+    icon: <SiFramer size={40} />
+  }
+]
+
+const backendSkills: Skill[] = [
+  {
+    name: 'PHP',
+    icon: <SiPhp size={40} />
+  },
+  {
+    name: 'Python',
+    icon: <SiPython size={40} />
+  },
+  {
+    name: 'Firebase',
+    icon: <SiFirebase size={40} />
+  },
+  {
+    name: 'Laravel',
+    icon: <SiLaravel size={40} />
+  },
+  {
+    name: 'Flask',
+    icon: <SiFlask size={40} />
+  }
+]
+
+const databaseSkills: Skill[] = [
+  {
+    name: 'MySQL',
+    icon: <SiMysql size={40} />,
+  },
+  {
+    name: 'SQLite',
+    icon: <SiSqlite size={40} />,
+  },
+]
+
 
 export default function About() {
   return (
@@ -33,27 +108,27 @@ export default function About() {
         <div className='mt-8 flex gap-8 w-full flex-wrap'>
 
           <div className='grow shrink-0 w-1/5 min-w-[200px]'>
-            <h1 className='text-2xl font-semibold'>Frontend Development</h1>
+            <h3 className='text-2xl font-semibold'>Frontend Development</h3>
             <p className='mt-4 tracking-wide'>
               I specialize in building responsive and accessible user interfaces using HTML, CSS, JavaScript, and modern frameworks like React and Vue. Whether it’s a static website or a complex single-page application, I ensure a smooth, intuitive user experience across all devices.  
             </p>
           </div>
 
           <div className='grow shrink-0 w-1/5 min-w-[200px]'>
-            <h1 className='text-2xl font-semibold'>Backend Development</h1>
+            <h3 className='text-2xl font-semibold'>Backend Development</h3>
             <p className='mt-4 tracking-wide'>
               I build secure and efficient server-side applications using Node.js, PHP, or Python. I can create RESTful APIs, manage authentication systems, handle databases, and deploy scalable applications that support business logic and client needs.            </p>
           </div>
 
           <div className='grow shrink-0 w-1/5 min-w-[200px]'>
-            <h1 className='text-2xl font-semibold'>Api Integration</h1>
+            <h3 className='text-2xl font-semibold'>Api Integration</h3>
             <p className='mt-4 tracking-wide'>
               I integrate third-party APIs and develop custom APIs to extend your application's functionality. From payment gateways like Stripe and PayPal to social login systems and data services, I ensure smooth and secure communication between services.
             </p>
           </div>
 
           <div className='grow shrink-0 w-1/5 min-w-[200px]'>
-            <h1 className='text-2xl font-semibold'>Database Management</h1>
+            <h3 className='text-2xl font-semibold'>Database Management</h3>
             <p className='mt-4 tracking-wide'>
               I design, optimize, and maintain databases using MySQL, PostgreSQL, or MongoDB. I ensure data integrity, write efficient queries, and manage backups and migrations, supporting your application with a solid and secure data foundation.
             </p>
@@ -64,6 +139,36 @@ export default function About() {
 
       <section className='mt-40'>
         <h2 className='text-4xl font-bold'>Skills<Dot /></h2>
+        <div className='mt-8 space-y-6'>
+
+          <div>
+            <h3 className='text-2xl font-semibold'>Frontend Skills</h3>
+            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 w-full gap-4'>
+              {
+                frontendSkills.map((skill) => <SkillHoverCard name={skill.name} icon={skill.icon}/>)
+              }
+            </div>
+          </div>
+
+          <div>
+            <h3 className='text-2xl font-semibold'>Backend Skills</h3>
+            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 w-full gap-4'>
+              {
+                backendSkills.map((skill) => <SkillHoverCard name={skill.name} icon={skill.icon}/>)
+              }
+            </div>
+          </div>
+
+          <div>
+            <h3 className='text-2xl font-semibold'>Database Skills</h3>
+            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 w-full gap-4'>
+              {
+                databaseSkills.map((skill) => <SkillHoverCard name={skill.name} icon={skill.icon}/>)
+              }
+            </div>
+          </div>
+
+        </div>
       </section>
     
     </div>
