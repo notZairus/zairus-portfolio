@@ -1,24 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
-
-
-const currentPath = window.location.pathname;
 
 type NavButtonProps = {
   path: string,
-  children: string
+  children: string,
+  currentPath?: string 
 }
 
+
 function NavButton({ path, children }: NavButtonProps): React.ReactNode {
+  const currentPath = useLocation().pathname; 
+  
   return (
-    <Link to={path} className={path === currentPath ? "text-blue-400" : ""}>{children}</Link>
+    <Link to={path} className={path == currentPath ? "text-blue-400" : ""}>{children}</Link>
   )
 }
 
 export default function Header() {
   return (
-    <header className='w-full min-h-10 flex justify-between px-8 py-4 items-center fixed top-0 left-0 right-0 border-b border-white/10'>
+    <header className='w-full min-h-10 flex justify-between px-8 py-4 items-center fixed top-0 left-0 right-0'>
         <div className='aspect-square w-12 bg-white rounded-full overflow-hidden'>
           <img src="https://imgs.search.brave.com/9XHXpZoWrWDCRXvqC6S26W_suvveaHy-AuGhZP_7nk8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3F1YXNoLmlvL3N0/YXRpYy9pbWFnZXMv/dHV0b3JpYXNfZGVm/YXVsdF9pbWFnZS5q/cGc" alt="" />
         </div>        

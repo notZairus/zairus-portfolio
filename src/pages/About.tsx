@@ -1,0 +1,71 @@
+import Dot from '@/components/Dot'
+
+export default function About() {
+  return (
+    <div className='text-white py-20 lg:px-20 scrollbar-hidden'>
+      <h1 className='text-5xl lg:text-6xl font-black'>
+        About me<Dot />
+      </h1>
+      <p className='border-l-12 border-blue-400 text-xl lg:w-[800px] pl-2 mt-8'>Developing beautiful and functional website is my hobby, that’s why I always make sure my work is good quality.</p>
+      
+      <section className='mt-40'>
+        <h2 className=' text-4xl font-bold'>Who I am<Dot /></h2>
+        <div className='w-full flex flex-col lg:flex-row items-center justify-between mt-8 gap-8'>
+          <div className='flex-1 text-md'>
+            <p className='tracking-wide'>
+              I am Zairus Bermillo, a passionate web developer and aspiring full-stack engineer from the Philippines. I like translating ideas into engaging and practical online applications. With a strong background in both frontend and backend development, I create clean, responsive interfaces and robust server-side logic.<br />
+              <br />
+              When I'm not coding, I'm usually investigating new tech stacks, honing my UI/UX design abilities, or working on side projects to stretch my imagination. I'm dedicated to continuous improvement, whether through solo projects, open-source contributions, or collaboration with peers.<br />
+              <br />
+              Inspired by curiosity and coffee, I want to build meaningful digital experiences that are not just attractive, but also impactful.<br />
+            </p>
+          </div>
+          <div className='flex-1'>
+            <div className='bg-white w-full lg:w-[280px]  ml-auto rounded overflow-hidden object-cover'>
+              <img src="https://imgs.search.brave.com/9XHXpZoWrWDCRXvqC6S26W_suvveaHy-AuGhZP_7nk8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3F1YXNoLmlvL3N0/YXRpYy9pbWFnZXMv/dHV0b3JpYXNfZGVm/YXVsdF9pbWFnZS5q/cGc" alt="" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className='mt-40'>
+        <h2 className='font-bold text-4xl'>Services I can offer<Dot/></h2>
+        <div className='mt-8 flex gap-8 w-full flex-wrap'>
+
+          <div className='grow shrink-0 w-1/5 min-w-[200px]'>
+            <h1 className='text-2xl font-semibold'>Frontend Development</h1>
+            <p className='mt-4 tracking-wide'>
+              I specialize in building responsive and accessible user interfaces using HTML, CSS, JavaScript, and modern frameworks like React and Vue. Whether it’s a static website or a complex single-page application, I ensure a smooth, intuitive user experience across all devices.  
+            </p>
+          </div>
+
+          <div className='grow shrink-0 w-1/5 min-w-[200px]'>
+            <h1 className='text-2xl font-semibold'>Backend Development</h1>
+            <p className='mt-4 tracking-wide'>
+              I build secure and efficient server-side applications using Node.js, PHP, or Python. I can create RESTful APIs, manage authentication systems, handle databases, and deploy scalable applications that support business logic and client needs.            </p>
+          </div>
+
+          <div className='grow shrink-0 w-1/5 min-w-[200px]'>
+            <h1 className='text-2xl font-semibold'>Api Integration</h1>
+            <p className='mt-4 tracking-wide'>
+              I integrate third-party APIs and develop custom APIs to extend your application's functionality. From payment gateways like Stripe and PayPal to social login systems and data services, I ensure smooth and secure communication between services.
+            </p>
+          </div>
+
+          <div className='grow shrink-0 w-1/5 min-w-[200px]'>
+            <h1 className='text-2xl font-semibold'>Database Management</h1>
+            <p className='mt-4 tracking-wide'>
+              I design, optimize, and maintain databases using MySQL, PostgreSQL, or MongoDB. I ensure data integrity, write efficient queries, and manage backups and migrations, supporting your application with a solid and secure data foundation.
+            </p>
+          </div>
+
+        </div>
+      </section>
+
+      <section className='mt-40'>
+        <h2 className='text-4xl font-bold'>Skills<Dot /></h2>
+      </section>
+    
+    </div>
+  )
+}
