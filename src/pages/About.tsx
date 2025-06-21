@@ -10,7 +10,7 @@ export default function About() {
       
       <section className='mt-40'>
         <h2 className=' text-4xl font-bold'>Who I am<Dot /></h2>
-        <div className='w-full flex flex-col lg:flex-row items-center justify-between mt-8 gap-8'>
+        <div className='w-full flex flex-col-reverse lg:flex-row items-center justify-between mt-8 gap-8'>
           <div className='flex-1 text-md'>
             <p className='tracking-wide'>
               I am Zairus Bermillo, a passionate web developer and aspiring full-stack engineer from the Philippines. I like translating ideas into engaging and practical online applications. With a strong background in both frontend and backend development, I create clean, responsive interfaces and robust server-side logic.<br />
