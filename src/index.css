@@ -146,3 +146,8 @@
 .scroll-custom::-webkit-scrollbar-thumb:hover {
   background: purple; 
 }
+
+.scroll-hidden::-webkit-scrollbar {
+  display: none;
+  width: 0px;
+}
