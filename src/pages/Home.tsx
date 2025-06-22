@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { motion } from "motion/react";
+import { motion } from "motion/react"
+import { ReactTyped } from 'react-typed';
 
 export default function Home() {
 
@@ -30,7 +31,19 @@ export default function Home() {
         transition={{duration: 2, type: "spring"}}
       >
         <p className='mt-4 text-center'>Hello, I'm Zairus Bermillo</p>
-        <h1 className='text-5xl lg:text-6xl mt-4 font-black text-center'>Full Stack Developer</h1>
+            {/* <h1 className='text-5xl lg:text-6xl mt-4 font-black text-center'>Full Stack Developer</h1> */}
+        <h1 className='text-5xl lg:text-6xl mt-4 font-black text-center'>
+          <ReactTyped
+            loop
+            typeSpeed={80}
+            backSpeed={80}
+            strings={[
+              "Fullstack Developer",
+              "Frontend Developer",
+              "Backend Developer"
+            ]}
+          />
+        </h1>
         <p className='mt-4 text-gray-500 text-center lg:w-1/2 w-11/12'>
           A full stack developer based on Philippines, I’m more than willing
           to help you build stunning websites you will love.

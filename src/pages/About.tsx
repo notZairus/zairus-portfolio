@@ -1,11 +1,28 @@
 import Dot from '@/components/Dot'
 import { SiJavascript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiShadcnui, SiFramer, SiPhp, SiLaravel, SiPython, SiFirebase, SiMysql, SiSqlite, SiFlask } from "react-icons/si";
 import SkillHoverCard from '@/components/SkillHoverCard';
-
+import { motion } from "motion/react";
+import type { Variants } from "motion/react";
 
 type Skill = {
   name: string,
   icon: React.ReactNode
+}
+
+
+const InViewVariant: Variants = {
+  'initial': {
+    opacity: 0,
+    y: 64
+  },
+  'animate': {
+    opacity: 1,
+    y: 0,
+    transition: {
+      duration: 0.5,
+      ease: 'easeInOut',
+    }
+  },
 }
 
 
@@ -78,12 +95,25 @@ const databaseSkills: Skill[] = [
 export default function About() {
   return (
     <div className='text-white py-20 lg:px-20 scrollbar-hidden'>
-      <h1 className='text-5xl lg:text-6xl font-black'>
-        About me<Dot />
-      </h1>
-      <p className='border-l-12 border-blue-400 text-xl lg:w-[800px] pl-2 mt-8'>Developing beautiful and functional website is my hobby, that’s why I always make sure my work is good quality.</p>
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1}}
+        transition={{ duration: 1 }}
+      >
+        <h1 
+          className='text-5xl lg:text-6xl font-black'>
+          About me<Dot />
+        </h1>
+        <p className='border-l-12 border-blue-400 text-xl lg:w-[800px] pl-2 mt-8'>Developing beautiful and functional website is my hobby, that’s why I always make sure my work is good quality.</p>
+      </motion.div>
       
-      <section className='mt-40'>
+      <motion.section 
+        className='mt-40'
+        variants={InViewVariant}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         <h2 className=' text-4xl font-bold'>Who I am<Dot /></h2>
         <div className='w-full flex flex-col-reverse lg:flex-row items-center justify-between mt-8 gap-8'>
           <div className='flex-1 text-md'>
@@ -101,9 +131,15 @@ export default function About() {
             </div>
           </div>
         </div>
-      </section>
+      </motion.section>
 
-      <section className='mt-40'>
+      <motion.section 
+        className='mt-40'
+        variants={InViewVariant}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         <h2 className='font-bold text-4xl'>Services I can offer<Dot/></h2>
         <div className='mt-8 flex gap-8 w-full flex-wrap'>
 
@@ -135,9 +171,15 @@ export default function About() {
           </div>
 
         </div>
-      </section>
+      </motion.section>
 
-      <section className='mt-40'>
+      <motion.section 
+        className='mt-40'
+        variants={InViewVariant}
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+      >
         <h2 className='text-4xl font-bold'>Skills<Dot /></h2>
         <div className='mt-8 space-y-6'>
 
@@ -169,7 +211,7 @@ export default function About() {
           </div>
 
         </div>
-      </section>
+      </motion.section>
     
     </div>
   )
