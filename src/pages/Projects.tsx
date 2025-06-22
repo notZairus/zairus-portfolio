@@ -1,21 +1,7 @@
 import { motion } from "motion/react";
-// import type { Variants } from "motion/react"
 import Dot from "../components/Dot";
 import { cn } from "@/lib/utils";
 
-
-// const InViewVariant: Variants = {
-//   'initial': {
-//     opacity: 0,
-//   },
-//   'animate': {
-//     opacity: 1,
-//     y: 0,
-//     transition: {
-//       duration: 0.5,
-//     }
-//   },
-// }
 
 
 export default function Projects() {
@@ -33,16 +19,31 @@ export default function Projects() {
                 <p className='border-l-12 border-blue-400 text-xl lg:w-[800px] pl-2 mt-8'>Here are my projects that showcase my ability to build beautiful and functional websites, and reflect the effort I put into improving with every creation.</p>
             </motion.div>
 
-            <section className="grid grid-cols-1 md:grid-cols-2 auto-rows-[100px] md:gap-x-10 gap-y-10 mt-20">
-                <div className="col-start-1 row-span-1"></div>
+            <section className="grid grid-cols-1 md:grid-cols-2 auto-rows-[148px] md:auto-rows-[120px] md:gap-x-10 gap-y-8 md:gap-y-10 md:mt-20">
+                <div></div>
                 {
                     ['Quizzital', 'FoodIfAI', 'Adam\'s Ice Cream POS', 'Random', 'Random', 'Random'].map((project, index) => (
-                        <div className={cn("bg-white/15 rounded-xl md:row-span-4 row-span-3 overflow-hidden relative w-full", index % 2 === 0 ? "col-start-2" : "col-start-1")}>
+                        <motion.div 
+                            className={cn("bg-white/15 rounded-lg row-span-1 md:row-span-2 overflow-hidden relative w-full cursor-pointer")}
+                            initial={{
+                                opacity: 0,
+                                x: index % 2 === 0 ? 30 : -30
+                            }}
+                            whileInView={{
+                                opacity: 1,
+                                x: 0,
+                            }}
+                            transition={{ duration: 0.5 }}
+                            viewport={{ once: true, margin: "-80px" }}
+                        >
                             <motion.img 
                                 src="https://imgs.search.brave.com/9XHXpZoWrWDCRXvqC6S26W_suvveaHy-AuGhZP_7nk8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3F1YXNoLmlvL3N0/YXRpYy9pbWFnZXMv/dHV0b3JpYXNfZGVm/YXVsdF9pbWFnZS5q/cGc" 
                                 alt="project-preview" 
                                 className="w-full h-full object-cover"
                                 whileHover={{
+                                    scale: 1.05
+                                }}
+                                whileTap={{
                                     scale: 1.05
                                 }}
                             />
@@ -51,29 +52,20 @@ export default function Projects() {
                                 whileHover={{
                                     opacity: 1
                                 }}
+                                whileTap={{
+                                    opacity: 1
+                                }}
                             >
                                 <div className="absolute bottom-4 w-full px-4 py-3">
                                     <p className="text-2xl font-semibold max-w-full break-words">
                                         {project}
-                                        {project}
                                     </p>
-                                    <p className="mt-2 max-w-full break-words overflow-ellipsis">
-                                        {project}
-                                        {project}
-                                        {project}
-                                        {project}
-                                        {project}
-                                        {project}
-                                        {project}
-                                        {project}
-                                        {project}
-                                        {project}
-                                        {project}
+                                    <p className="hidden md:block mt-2 max-w-full break-words overflow-ellipsis">
                                         {project}
                                     </p>
                                 </div>
                             </motion.div>
-                        </div>
+                        </motion.div>
                     ))
                 }
             </section>
