@@ -14,17 +14,53 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { SiFacebook, SiGithub, SiInstagram } from 'react-icons/si';
 import { useForm } from 'react-hook-form';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
+
+
+type FormData = {
+  email: string,
+  name: string,
+  subject: string,
+  message: string
+}
 
 
 export default function Contact() {
   const {register, handleSubmit, formState: { errors }} = useForm();
-  const form = useRef(null);
+  const form = useRef(undefined);
+  const firstRender = useRef(true);
   const [sendingEmail, setSendingEmail] = useState<boolean>(false);
+  const [emailSent, setEmailSent] = useState<boolean>(false);
+
+  console.log(firstRender);
+
+  useEffect(() => {
+    if (firstRender.current || !form.current) {
+      firstRender.current = false;
+      return;
+    };
+
+    if (sendingEmail === false) {
+      setEmailSent(true);
+
+      let inputs = form.current.querySelectorAll('input, textarea');
+      inputs.forEach((element: HTMLInputElement) => {
+        element.value = "";
+      });
 
 
-  function sendToZai(): void {
+
+      setTimeout(() => {
+        setEmailSent(false);
+      }, 2000);
+    }
+  }, [sendingEmail])
+
+
+
+
+  function sendToZai(data: FormData): void {
     if (!form.current) return;
     
     setSendingEmail(true);
@@ -49,10 +85,10 @@ export default function Contact() {
     )
   }
 
-
   return (
     <>
-      <AnimatePresence>
+      <AnimatePresence mode="wait">
+
         {sendingEmail && (
           <motion.div 
             className='bg-black/80 fixed inset-0 flex'
@@ -77,6 +113,34 @@ export default function Contact() {
               <p className='text-white'>Sending Email!</p>
             </div>
         </motion.div>)}
+
+
+        {emailSent && (
+          <motion.div 
+            className='bg-black/80 fixed inset-0 flex'
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1}}
+            exit={{ opacity: 0 }}
+          >
+            <div className='absolute top-1/2 left-1/2 -translate-1/2 flex flex-col items-center gap-8'>
+              {/* <motion.div 
+                className='aspect-square bg-blue-400 w-4 rounded-full' 
+                animate={{
+                  x: [-48, 0, 48, -48, 0, 48, 0, -48, 48, 0, -48],
+                  y: [-48, -48, -48, 0, 0, 0, 0, 0, -48, -48, -48],
+                }}
+                transition={{
+                  duration: 1,
+                  type: "tween",
+                  ease: 'easeInOut',
+                  repeat: Infinity
+                }}
+              /> */}
+              <p className='text-white'>Email Sent!</p>
+            </div>
+        </motion.div>)}
+
+
       </AnimatePresence>
 
       <div className='text-white py-20 lg:px-20 scrollbar-hidden'>
