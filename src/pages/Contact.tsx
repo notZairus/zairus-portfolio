@@ -18,17 +18,9 @@ import { useEffect, useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 
 
-type FormData = {
-  email: string,
-  name: string,
-  subject: string,
-  message: string
-}
-
-
 export default function Contact() {
   const {register, handleSubmit, formState: { errors }} = useForm();
-  const form = useRef(undefined);
+  const form = useRef<HTMLFormElement>(null);
   const firstRender = useRef(true);
   const [sendingEmail, setSendingEmail] = useState<boolean>(false);
   const [emailSent, setEmailSent] = useState<boolean>(false);
@@ -45,11 +37,11 @@ export default function Contact() {
       setEmailSent(true);
 
       let inputs = form.current.querySelectorAll('input, textarea');
-      inputs.forEach((element: HTMLInputElement) => {
-        element.value = "";
+      inputs.forEach((element) => {
+        if (element instanceof HTMLInputElement || element instanceof HTMLTextAreaElement) {
+          element.value = ""
+        }
       });
-
-
 
       setTimeout(() => {
         setEmailSent(false);
@@ -60,7 +52,7 @@ export default function Contact() {
 
 
 
-  function sendToZai(data: FormData): void {
+  function sendToZai(): void {
     if (!form.current) return;
     
     setSendingEmail(true);
@@ -218,7 +210,7 @@ export default function Contact() {
                         })}
                         name="email"
                       />
-                      <div className='text-red-500 h-5'>
+                      <div className='text-red-500 h-5 text-xs mt-1'>
                         { errors.email && <p>{errors.email.message as string}</p> }
                       </div>
                     </div>
@@ -235,7 +227,7 @@ export default function Contact() {
                         })}
                         name="name"
                       />
-                      <div className='text-red-500 h-5'>
+                      <div className='text-red-500 h-5 text-xs mt-1'>
                         { errors.name && <p>{errors.name.message as string}</p> }
                       </div>
                     </div>
@@ -253,7 +245,7 @@ export default function Contact() {
                       })}
                       name="subject"
                     />
-                    <div className='text-red-500 h-5'>
+                    <div className='text-red-500 h-5 text-xs mt-1'>
                       { errors.subject && <p>{errors.subject.message as string}</p> }
                     </div>
                   </div>
@@ -271,7 +263,7 @@ export default function Contact() {
                       })}
                       name="message"
                     />
-                    <div className='text-red-500 h-5'>
+                    <div className='text-red-500 h-5 text-xs mt-1'>
                       { errors.message && <p>{errors.message.message as string}</p> }
                     </div>
                   </div>
