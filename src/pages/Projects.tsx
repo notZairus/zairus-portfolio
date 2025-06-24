@@ -34,7 +34,7 @@ export default function Projects() {
                         
                         <motion.div 
                             onClick={() => navigate(`/projects/${index+1}`)}
-                            className={cn("bg-white/15 rounded-lg row-span-1 md:row-span-2 overflow-hidden relative w-full cursor-pointer")}
+                            className={cn("bg-white/15 rounded-lg row-span-2 md:row-span-3 overflow-hidden relative w-full cursor-pointer")}
                             initial={{
                                 opacity: 0,
                                 x: index % 2 === 0 ? 30 : -30
@@ -71,7 +71,7 @@ export default function Projects() {
                                         <p className="text-2xl font-semibold max-w-full break-words">
                                             {project.name}
                                         </p>
-                                        <p className="hidden md:block max-w-full break-words overflow-ellipsis">
+                                        <p className="hidden md:block max-w-full break-words overflow-hidden whitespace-nowrap text-ellipsis">
                                             {project.description}
                                         </p>
                                     </div>
@@ -85,7 +85,6 @@ export default function Projects() {
                                 </div>
                             </motion.div>
                         </motion.div>
-                        
                     ))
                 }
             </section>
