@@ -3,10 +3,12 @@ import Dot from "../components/Dot";
 import { cn } from "@/lib/utils";
 import { projects } from "@/datas"; 
 import { Badge } from "@/components/ui/badge";
+import { useNavigate } from "react-router-dom";
 
 
 
 export default function Projects() {
+    const navigate = useNavigate();
 
     console.log(projects);
 
@@ -31,6 +33,7 @@ export default function Projects() {
                     projects.map((project, index) => (
                         
                         <motion.div 
+                            onClick={() => navigate(`/projects/${index+1}`)}
                             className={cn("bg-white/15 rounded-lg row-span-1 md:row-span-2 overflow-hidden relative w-full cursor-pointer")}
                             initial={{
                                 opacity: 0,
