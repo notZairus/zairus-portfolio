@@ -27,13 +27,13 @@ export default function Projects() {
             <section className="grid grid-cols-1 md:grid-cols-2 auto-rows-[148px] md:auto-rows-[120px] md:gap-x-10 gap-y-8 md:gap-y-10 md:mt-20">
                 <div></div>
                 {
-                    ['Quizzital', 'FoodIfAI', 'Adam\'s Ice Cream POS', 'Random', 'Random', 'Random'].map((project, index) => (
+                    ['Quizzital', 'FoodIfAI', 'Adam\'s Ice Cream POS', 'Random', 'Random', 'Random'].map(() => (
                         
                         <Carousel className={cn("bg-white/15 rounded-lg row-span-1 md:row-span-2 overflow-hidden relative w-full h-full cursor-pointer")}>
                             <CarouselContent>
 
                                 {/* para sa project images */}
-                                {Array.from({ length: 5 }).map((_, index) => (
+                                {Array.from({ length: 5 }).map((_) => (
                                     <CarouselItem>
                                         <motion.img 
                                             src="https://imgs.search.brave.com/9XHXpZoWrWDCRXvqC6S26W_suvveaHy-AuGhZP_7nk8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3F1YXNoLmlvL3N0/YXRpYy9pbWFnZXMv/dHV0b3JpYXNfZGVm/YXVsdF9pbWFnZS5q/cGc" 
