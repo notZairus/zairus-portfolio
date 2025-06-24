@@ -187,7 +187,7 @@ export default function About() {
 
           <div>
             <h3 className='text-2xl font-semibold'>Frontend Skills</h3>
-            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 w-full gap-4'>
+            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 w-full gap-4'>
               {
                 frontendSkills.map((skill) => <SkillHoverCard name={skill.name} icon={skill.icon}/>)
               }
@@ -196,7 +196,7 @@ export default function About() {
 
           <div>
             <h3 className='text-2xl font-semibold'>Backend Skills</h3>
-            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 w-full gap-4'>
+            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 w-full gap-4'>
               {
                 backendSkills.map((skill) => <SkillHoverCard name={skill.name} icon={skill.icon}/>)
               }
@@ -205,7 +205,7 @@ export default function About() {
 
           <div>
             <h3 className='text-2xl font-semibold'>Database Skills</h3>
-            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 xl:grid-cols-8 w-full gap-4'>
+            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 w-full gap-4'>
               {
                 databaseSkills.map((skill) => <SkillHoverCard name={skill.name} icon={skill.icon}/>)
               }

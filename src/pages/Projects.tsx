@@ -63,7 +63,7 @@ export default function Projects() {
                                     opacity: 1
                                 }}
                             >
-                                <div className="absolute bottom-4 w-full px-4 py-3">
+                                <div className="absolute bottom-4 w-full px-4 py-2">
                                     <div className="space-y-2">
                                         <p className="text-2xl font-semibold max-w-full break-words">
                                             {project.name}
