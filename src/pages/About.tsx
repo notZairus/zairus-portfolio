@@ -31,65 +31,65 @@ const InViewVariant: Variants = {
 const frontendSkills: Skill[] = [
   {
     name: 'Html',
-    icon: <SiHtml5 size={40} />
+    icon: <SiHtml5 size={36} />
   },
   {
     name: 'Css',
-    icon: <SiCss3 size={40} />
+    icon: <SiCss3 size={36} />
   },
   {
     name: 'Javasctipt',
-    icon: <SiJavascript size={40} />
+    icon: <SiJavascript size={36} />
   },
   {
     name: 'React',
-    icon: <SiReact size={40} />
+    icon: <SiReact size={36} />
   },
   {
     name: 'TailwindCss',
-    icon: <SiTailwindcss size={40} />
+    icon: <SiTailwindcss size={36} />
   },
   {
     name: 'ShadCN',
-    icon: <SiShadcnui size={40} />
+    icon: <SiShadcnui size={36} />
   },
   {
     name: 'Motion',
-    icon: <SiFramer size={40} />
+    icon: <SiFramer size={36} />
   }
 ]
 
 const backendSkills: Skill[] = [
   {
     name: 'PHP',
-    icon: <SiPhp size={40} />
+    icon: <SiPhp size={36} />
   },
   {
     name: 'Python',
-    icon: <SiPython size={40} />
+    icon: <SiPython size={36} />
   },
   {
     name: 'Firebase',
-    icon: <SiFirebase size={40} />
+    icon: <SiFirebase size={36} />
   },
   {
     name: 'Laravel',
-    icon: <SiLaravel size={40} />
+    icon: <SiLaravel size={36} />
   },
   {
     name: 'Flask',
-    icon: <SiFlask size={40} />
+    icon: <SiFlask size={36} />
   }
 ]
 
 const databaseSkills: Skill[] = [
   {
     name: 'MySQL',
-    icon: <SiMysql size={40} />,
+    icon: <SiMysql size={36} />,
   },
   {
     name: 'SQLite',
-    icon: <SiSqlite size={40} />,
+    icon: <SiSqlite size={36} />,
   },
 ]
 
