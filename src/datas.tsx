@@ -2,7 +2,7 @@ type Project = {
     name: string,
     description: string,
     technologyUsed: string[],
-    screenshotPaths: string[] | string,
+    screenshotPaths: string[],
 }
 
 

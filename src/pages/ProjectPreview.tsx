@@ -1,19 +1,16 @@
 import { useParams } from 'react-router-dom'
 import { projects } from '@/datas';
 import { motion, AnimatePresence } from "motion/react";
-import Dot from '@/components/Dot';
 import {
   Carousel,
   CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
 } from "@/components/ui/carousel"
 import { useEffect, useState } from 'react';
 
+
 export default function ProjectPreview() {
-  const index = useParams().index - 1;
-  const project = projects[index];
+  const { index } = useParams<{ index: any }>().index;
+  const project = projects[index - 1];
   const [justEntered, setJustEntered] = useState(true);
 
   useEffect(() => {
