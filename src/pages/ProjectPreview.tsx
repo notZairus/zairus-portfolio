@@ -9,14 +9,16 @@ import { useEffect, useState } from 'react';
 
 
 export default function ProjectPreview() {
-  const { index } = useParams<{ index: any }>().index;
-  const project = projects[index - 1];
+  const { index } = useParams();
+  const project = projects[Number(index) - 1];
   const [justEntered, setJustEntered] = useState(true);
+
+  console.log(project);
 
   useEffect(() => {
     setTimeout(() => {
       setJustEntered(false);
-    }, 3000)
+    }, 2000)
   }, []);
 
   return (
@@ -32,7 +34,7 @@ export default function ProjectPreview() {
           <CarouselContent>
             {
               project.screenshotPaths.map((imgPath) => (
-                <img src={imgPath} alt="" />
+                <img src={imgPath} alt="" key={imgPath} />
               ))
             }
           </CarouselContent>
@@ -50,7 +52,7 @@ export default function ProjectPreview() {
                   duration: 1,
                 }}
               >
-                <p className='text-xl'>This image is scrollable...</p>
+                <p className='text-xl'>This image is slideable...</p>
               </motion.div>
             }
 
