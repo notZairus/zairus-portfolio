@@ -3,6 +3,16 @@ import { SiJavascript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiShadcnui, SiFr
 import SkillHoverCard from '@/components/SkillHoverCard';
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
+import { Card, CardContent } from "@/components/ui/card"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "@/components/ui/carousel"
+
+
 
 type Skill = {
   name: string,
