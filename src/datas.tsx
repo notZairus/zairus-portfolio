@@ -87,7 +87,7 @@ export const projects: Project[] = [
             "Gemini API",
             "Web APIs (Camera, Video)",
         ],
-        screenshotPaths: Array.from({ length: 8 }).map((_, index) => {
+        screenshotPaths: Array.from({ length: 8 }).map((_) => {
             // return `/project_screenshots/food_if_ai/_${index+1}.png`;
             return "https://imgs.search.brave.com/eJAg4n20nh_hk4T2ST3fOHd1gykrvsnmke9QIzaRTbI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWFndHJvbC5jb20v/ZnJhbmNlL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9wbGFjZWhvbGRl/ci0xNi05LXJhdGlv/LTMwMHgxNjkucG5n";
         }),
