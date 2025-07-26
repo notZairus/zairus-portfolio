@@ -57,14 +57,8 @@ export default function Projects() {
                                     scale: 1.05
                                 }}
                             />
-                            <motion.div 
-                                className="absolute inset-0 w-full bg-gradient-to-t from-black/90 to-black/30 opacity-1"
-                                whileHover={{
-                                    opacity: 1
-                                }}
-                                whileTap={{
-                                    opacity: 1
-                                }}
+                            <div 
+                                className="absolute inset-0 w-full bg-gradient-to-t from-black/45 to-black/10 transition-colors duration-300 hover:from-black/60 hover:to-black/20 "
                             >
                                 <div className="absolute bottom-4 w-full px-4 py-2">
                                     <div className="space-y-2">
@@ -78,12 +72,12 @@ export default function Projects() {
                                     <div className="flex flex-wrap gap-2 mt-4">
                                     {
                                         project.technologyUsed.map((tech) => (
-                                            <Badge variant={"secondary"}>{tech}</Badge>
+                                            <Badge variant={"secondary"} className="py-1 px-4 rounded-full text">{tech}</Badge>
                                         ))
                                     }
                                 </div>
                                 </div>
-                            </motion.div>
+                            </div>
                         </motion.div>
                     ))
                 }
