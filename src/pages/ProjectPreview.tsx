@@ -34,7 +34,9 @@ export default function ProjectPreview() {
           <CarouselContent>
             {
               project.screenshotPaths.map((imgPath) => (
-                <img src={imgPath} alt="" key={imgPath} />
+                <div className="w-full aspect-16/9 h-full bg-white/20">
+                  <img src={imgPath} alt="" key={imgPath} className="w-full h-full object-fill"/>
+                </div>
               ))
             }
           </CarouselContent>
