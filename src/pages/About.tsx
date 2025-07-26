@@ -120,16 +120,16 @@ export default function About() {
         <div className='w-full flex flex-col-reverse lg:flex-row items-center justify-between mt-8 gap-8'>
           <div className='flex-1 text-md'>
             <p className='tracking-wide'>
-              I am Zairus Bermillo, a passionate web developer and aspiring full-stack engineer from the Philippines. I like translating ideas into engaging and practical online applications. With a strong background in both frontend and backend development, I create clean, responsive interfaces and robust server-side logic.<br />
+              I am <strong>Zairus Bermillo</strong>, a passionate web developer and aspiring full-stack developer from the <strong>Philippines</strong>. I like translating ideas into engaging and practical online applications. With a strong background in both <strong>frontend and backend development</strong>, I create clean, responsive interfaces and <strong>robust server-side logic</strong>.<br />
               <br />
-              When I'm not coding, I'm usually investigating new tech stacks, honing my UI/UX design abilities, or working on side projects to stretch my imagination. I'm dedicated to continuous improvement, whether through solo projects, open-source contributions, or collaboration with peers.<br />
+              When I'm not coding, I'm usually browsing new tech stacks, honing my UI/UX design abilities, or working on side projects to stretch my imagination. I'm dedicated to continuous improvement, whether through solo projects, open-source contributions, or collaboration with peers.<br />
               <br />
               Inspired by curiosity and coffee, I want to build meaningful digital experiences that are not just attractive, but also impactful.<br />
             </p>
           </div>
           <div className='flex-1'>
-            <div className='bg-white w-full lg:w-[280px]  ml-auto rounded overflow-hidden object-cover'>
-              <img src="https://imgs.search.brave.com/9XHXpZoWrWDCRXvqC6S26W_suvveaHy-AuGhZP_7nk8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3F1YXNoLmlvL3N0/YXRpYy9pbWFnZXMv/dHV0b3JpYXNfZGVm/YXVsdF9pbWFnZS5q/cGc" alt="" />
+            <div className='bg-white w-full lg:w-[360px]  ml-auto rounded overflow-hidden object-cover'>
+              <img src="/zairus.jpg" alt="" />
             </div>
           </div>
         </div>

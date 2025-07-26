@@ -21,12 +21,12 @@ export default function Home() {
         className='w-full h-full flex items-center flex-col justify-center text-white absolute z-10 top-0 left-0'
       >
         <motion.div 
-          className='aspect-square w-36 rounded-full bg-white overflow-hidden'
+          className='aspect-square w-36 rounded-full bg-white overflow-hidden border'
           initial={{scale: 0}}
           animate={{scale: 1}}
           transition={{duration: 2, type: "spring"}}
         >
-          <img src="https://imgs.search.brave.com/9XHXpZoWrWDCRXvqC6S26W_suvveaHy-AuGhZP_7nk8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/c3F1YXNoLmlvL3N0/YXRpYy9pbWFnZXMv/dHV0b3JpYXNfZGVm/YXVsdF9pbWFnZS5q/cGc" alt="" />
+          <img src="/zairus.jpg" alt="" />
         </motion.div>
         <motion.div 
           className="flex flex-col items-center w-full"
