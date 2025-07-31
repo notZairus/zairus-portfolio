@@ -13,6 +13,28 @@ type Project = {
 export const projects: Project[] = [
 
     {
+        name: "Shuttr",
+        description: "A browser-based photobooth app for fun and quick snapshots. Take selfies with custom filters, then download or share instantly — no data is saved.",
+        features: [
+            "Works on both desktop and mobile browsers",
+            "Live camera preview with mirror mode",
+            "Apply fun filters before capturing (e.g., grayscale, sepia, brightness) //WIP",
+            "Capture photos directly from the browser",
+            "Download images instantly after capture",
+            "Fully client-side — no data stored or uploaded",
+            "Responsive design with intuitive UI",
+            "Minimalist and clean interface using shadcn/ui"
+        ],
+        technologyUsed: ["React", "Tailwind CSS", "ShadCN", "html2canvas", "JavaScript"],
+        screenshotPaths: Array.from({ length: 6 }).map((_, index) => {
+            return `https://imgs.search.brave.com/eJAg4n20nh_hk4T2ST3fOHd1gykrvsnmke9QIzaRTbI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWFndHJvbC5jb20v/ZnJhbmNlL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9wbGFjZWhvbGRl/ci0xNi05LXJhdGlv/LTMwMHgxNjkucG5n`;
+        }),
+        livePreviewUrl: "https://shuttr-pi.vercel.app",
+        githubRepo: "https://github.com/notZairus/shuttr"
+    },  
+
+
+    {
         name: "Pomolog",
         description: "A minimalist Pomodoro tracker with logging, history, and productivity insights. Designed for focused study sessions with subject-based tracking.",
         features: [
@@ -31,8 +53,7 @@ export const projects: Project[] = [
         screenshotPaths: Array.from({ length: 8 }).map((_, index) => {
             return `/project_screenshots/pomolog/_${index+1}.png`;
         }),
-        livePreviewUrl: "https://quizzital.vercel.app",
-        githubRepo: "https://github.com/notZairus/Quizzital_V2"
+        githubRepo: "https://github.com/notZairus/PomoLog"
     },
 
 
@@ -91,6 +112,7 @@ export const projects: Project[] = [
             // return `/project_screenshots/food_if_ai/_${index+1}.png`;
             return "https://imgs.search.brave.com/eJAg4n20nh_hk4T2ST3fOHd1gykrvsnmke9QIzaRTbI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWFndHJvbC5jb20v/ZnJhbmNlL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9wbGFjZWhvbGRl/ci0xNi05LXJhdGlv/LTMwMHgxNjkucG5n";
         }),
+        livePreviewUrl: "https://food-if-ai.vercel.app",
         githubRepo: "https://github.com/notZairus/FoodIfAi"
     },
     
