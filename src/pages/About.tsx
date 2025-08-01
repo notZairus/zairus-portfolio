@@ -1,5 +1,5 @@
 import Dot from '@/components/Dot'
-import { SiJavascript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiShadcnui, SiFramer, SiPhp, SiLaravel, SiPython, SiFirebase, SiMysql, SiSqlite, SiFlask } from "react-icons/si";
+import { SiJavascript, SiTypescript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiShadcnui, SiFramer, SiPhp, SiLaravel, SiPython, SiFirebase, SiMysql, SiSqlite, SiFlask } from "react-icons/si";
 import SkillHoverCard from '@/components/SkillHoverCard';
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
@@ -40,6 +40,10 @@ const frontendSkills: Skill[] = [
   {
     name: 'Javasctipt',
     icon: <SiJavascript size={36} />
+  },
+  {
+    name: 'Typescript',
+    icon: <SiTypescript size={36} />
   },
   {
     name: 'React',
