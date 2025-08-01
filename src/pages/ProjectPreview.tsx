@@ -29,7 +29,7 @@ export default function ProjectPreview() {
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
     >
-      <div className='w-full aspect-16/9 bg-white/20 relative rounded overflow-hidden'>
+      <div className='w-full aspect-16/9 bg-white/20 relative rounded overflow-hidden border border-primary/50'>
         <Carousel>
           <CarouselContent>
             {

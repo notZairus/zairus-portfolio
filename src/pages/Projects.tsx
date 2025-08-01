@@ -34,7 +34,7 @@ export default function Projects() {
                         
                         <motion.div 
                             onClick={() => navigate(`/projects/${index+1}`)}
-                            className={cn("bg-white/15 rounded-lg row-span-2 md:row-span-3 overflow-hidden relative w-full cursor-pointer")}
+                            className={cn("bg-white/15 rounded-lg border border-primary/40 row-span-2 md:row-span-3 overflow-hidden relative w-full cursor-pointer")}
                             initial={{
                                 opacity: 0,
                                 x: index % 2 === 0 ? 30 : -30
