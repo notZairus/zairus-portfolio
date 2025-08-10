@@ -22,7 +22,6 @@ export const projects: Project[] = [
             "Neo-brutalist design with bold visuals and accessible UI",
             "Responsive layout for desktop and mobile use",
             "Form validation with clear error messages",
-            "Fully customizable categories (Assignments, Announcements, Reminders, Other)",
             "Built with performance and simplicity in mind"
         ],
         technologyUsed: ["React", "Tailwind CSS", "ShadCN", "Framer Motion", "Axios", "n8n", "Google Sheets API"],
