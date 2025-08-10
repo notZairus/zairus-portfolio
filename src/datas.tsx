@@ -13,6 +13,28 @@ type Project = {
 export const projects: Project[] = [
 
     {
+        name: "Assistant",
+        description: "My personal web-based reminder and announcement system that syncs with Google Sheets via n8n and sends you real-time updates through Facebook Messenger. Perfect for keeping track of assignments, birthdays, and tasks.",
+        features: [
+            "Add assignments, announcement, tasks, and reminders from a custom web form",
+            "Data instantly stored in Google Sheets for easy access and backup",
+            "Automated Facebook Messenger notifications via n8n",
+            "Neo-brutalist design with bold visuals and accessible UI",
+            "Responsive layout for desktop and mobile use",
+            "Form validation with clear error messages",
+            "Fully customizable categories (Assignments, Announcements, Reminders, Other)",
+            "Built with performance and simplicity in mind"
+        ],
+        technologyUsed: ["React", "Tailwind CSS", "ShadCN", "Framer Motion", "Axios", "n8n", "Google Sheets API"],
+        screenshotPaths: Array.from({ length: 5 }).map((_, index) => {
+            return `/project_screenshots/assistant/_${index+1}.png`;
+        }),
+        livePreviewUrl: "https://zairus-assistant.vercel.app",
+        githubRepo: "https://github.com/notZairus/assistant"
+    },
+
+
+    {
         name: "Shuttr",
         description: "A browser-based photobooth app for fun and quick snapshots. Take selfies with custom filters, then download or share instantly — no data is saved.",
         features: [
@@ -68,7 +90,7 @@ export const projects: Project[] = [
             "View individual student quiz results",
             "Analyze student performance with basic analytics",
             "Send Gmail notifications to students about new quizzes",
-            "Use AI (Gemini) to generate quiz questions from lesson text",
+            "Use Artificial Intelligence to generate quiz questions from lesson text",
 
             // Student Panel
             "Join classrooms using the classroom's unique code",
