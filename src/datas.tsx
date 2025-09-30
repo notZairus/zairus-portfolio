@@ -29,6 +29,7 @@ export const projects: Project[] = [
         screenshotPaths: Array.from({ length: 10 }).map((_, index) => {
             return `/project_screenshots/reqmatic/_${index+1}.png`;
         }),
+        githubRepo: 'https://github.com/notZairus/brgyDocumentRequest'
     },
 
     {
