@@ -30,19 +30,19 @@ const InViewVariant: Variants = {
 
 const frontendSkills: Skill[] = [
   {
-    name: 'Html',
+    name: 'HTML',
     icon: <SiHtml5 size={36} />
   },
   {
-    name: 'Css',
+    name: 'CSS',
     icon: <SiCss3 size={36} />
   },
   {
-    name: 'Javasctipt',
+    name: 'JavaScript',
     icon: <SiJavascript size={36} />
   },
   {
-    name: 'Typescript',
+    name: 'TypeScript',
     icon: <SiTypescript size={36} />
   },
   {
@@ -50,7 +50,7 @@ const frontendSkills: Skill[] = [
     icon: <SiReact size={36} />
   },
   {
-    name: 'TailwindCss',
+    name: 'TailwindCSS',
     icon: <SiTailwindcss size={36} />
   },
   {
@@ -58,7 +58,7 @@ const frontendSkills: Skill[] = [
     icon: <SiShadcnui size={36} />
   },
   {
-    name: 'Motion',
+    name: 'Framer Motion',
     icon: <SiFramer size={36} />
   }
 ]
