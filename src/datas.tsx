@@ -13,6 +13,25 @@ type Project = {
 export const projects: Project[] = [
 
     {
+        name: "ReqMatic",
+        description: "An online document request system for Barangay Matictic that makes it easier for residents to request, track, and receive barangay documents. It helps reduce manual workload for staff while improving accessibility and communication between residents and the barangay office.",
+        features: [
+            "Residents can submit document requests online through a secure web form",
+            "Requests are stored in the database for easy tracking and management",
+            "Admins can approve, reject, and print requested documents",
+            "Automated email notifications to residents regarding request status",
+            "Dashboard for admins to monitor and manage requests efficiently",
+            "Penalty feature for residents that submit troll requests or don't claim their documents",
+            "User-friendly design with clear navigation",
+            "Responsive layout for both desktop and mobile use"
+        ],
+        technologyUsed: ["Laravel", "Inertia", "React", "MySQL", "TailwindCSS", "ShadCN", "Gmail SMTP"],
+        screenshotPaths: Array.from({ length: 10 }).map((_, index) => {
+            return `/project_screenshots/reqmatic/_${index+1}.png`;
+        }),
+    },
+
+    {
         name: "Assistant",
         description: "My personal web-based reminder and announcement system that syncs with Google Sheets via n8n and sends you real-time updates through Facebook Messenger. Perfect for keeping track of assignments, birthdays, and tasks.",
         features: [
