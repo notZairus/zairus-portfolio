@@ -25,7 +25,7 @@ export const projects: Project[] = [
             "User-friendly design with clear navigation",
             "Responsive layout for both desktop and mobile use"
         ],
-        technologyUsed: ["Laravel", "Inertia", "React", "MySQL", "TailwindCSS", "ShadCN", "Gmail SMTP"],
+        technologyUsed: ["Laravel", "Inertia", "React", "TypeScript", "MySQL", "TailwindCSS", "ShadCN", "Gmail SMTP"],
         screenshotPaths: Array.from({ length: 10 }).map((_, index) => {
             return `/project_screenshots/reqmatic/_${index+1}.png`;
         }),
@@ -44,7 +44,7 @@ export const projects: Project[] = [
             "Form validation with clear error messages",
             "Built with performance and simplicity in mind"
         ],
-        technologyUsed: ["React", "Tailwind CSS", "ShadCN", "Framer Motion", "Axios", "n8n", "Google Sheets API"],
+        technologyUsed: ["React", "TypeScript", "Tailwind CSS", "ShadCN", "Framer Motion", "Axios", "n8n", "Google Sheets API"],
         screenshotPaths: Array.from({ length: 5 }).map((_, index) => {
             return `/project_screenshots/assistant/_${index+1}.png`;
         }),
@@ -66,7 +66,7 @@ export const projects: Project[] = [
             "Responsive design with intuitive UI",
             "Minimalist and clean interface using shadcn/ui"
         ],
-        technologyUsed: ["React", "Tailwind CSS", "ShadCN", "html2canvas", "JavaScript"],
+        technologyUsed: ["React", "TypeScript", "Tailwind CSS", "ShadCN", "html2canvas", "JavaScript"],
         screenshotPaths: Array.from({ length: 4 }).map((_, index) => {
             return `/project_screenshots/shuttr/_${index+1}.png`;
         }),
@@ -90,7 +90,7 @@ export const projects: Project[] = [
             "Dark/light mode toggle",
             "Responsive and distraction-free interface using shadcn/ui"
         ],
-        technologyUsed: ["React", "Tailwind CSS", "Laravel", "Inertia.js", "PHP", "MySQL", "ShadCN", ],
+        technologyUsed: ["React", "TypeScript", "Tailwind CSS", "Laravel", "Inertia.js", "PHP", "MySQL", "ShadCN", ],
         screenshotPaths: Array.from({ length: 8 }).map((_, index) => {
             return `/project_screenshots/pomolog/_${index+1}.png`;
         }),
@@ -119,7 +119,7 @@ export const projects: Project[] = [
             // Common
             "Edit and update user profile"
         ],
-        technologyUsed: ['React', 'Python', 'Flask', "SQLAlchemy",'TailwindCSS', 'MySQL', 'Firebase', 'Gemini API', 'Gmail SMTP'],
+        technologyUsed: ['React', "JavaScript", 'Python', 'Flask', "SQLAlchemy",'TailwindCSS', 'MySQL', 'Firebase', 'Gemini API', 'Gmail SMTP'],
         screenshotPaths: Array.from({ length: 8 }).map((_, index) => {
             return `/project_screenshots/quizzital/_${index+1}.png`;
         }),
@@ -144,8 +144,8 @@ export const projects: Project[] = [
         ],
         technologyUsed: [
             "React",
+            "JavaScript",
             "TailwindCSS",
-            "Typescript",
             "Gemini API",
             "Web APIs (Camera, Video)",
         ],
