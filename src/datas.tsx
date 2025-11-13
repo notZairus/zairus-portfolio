@@ -26,7 +26,8 @@ export const projects: Project[] = [
         screenshotPaths: Array.from({ length: 7 }).map((_, index) => {
             return `/project_screenshots/jienelle_portfolio/_${index+1}.png`;
         }),
-        githubRepo: 'https://github.com/notZairus/brgyDocumentRequest'
+        githubRepo: 'https://github.com/notZairus/e-portfolio',
+        livePreviewUrl: 'https://jienelle-portfolio.vercel.app'
     },
     {
         name: "ReqMatic",
