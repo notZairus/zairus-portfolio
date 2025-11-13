@@ -11,7 +11,23 @@ type Project = {
 
 
 export const projects: Project[] = [
-
+    {
+        name: "Jienelle Portfolio",
+        description: "A personal portfolio website for Jienelle, a Computer Science student. Showcases her design projects, skills, and experience with a clean and modern interface.",
+        features: [
+            "User-friendly interface for easy navigation",
+            "Easy Navigation to different sections: About, Projects, Contact",
+            "Responsive design for optimal viewing on all devices",
+            "Contact form for direct communication",
+            "Showcase of projects with descriptions and images",
+            "Interactive elements with smooth animations",
+        ],
+        technologyUsed: ["React", "TypeScript", "TailwindCSS", "ShadCN", "ReactBits"],
+        screenshotPaths: Array.from({ length: 7 }).map((_, index) => {
+            return `/project_screenshots/jienelle_portfolio/_${index+1}.png`;
+        }),
+        githubRepo: 'https://github.com/notZairus/brgyDocumentRequest'
+    },
     {
         name: "ReqMatic",
         description: "An online document request system for Barangay Matictic that makes it easier for residents to request, track, and receive barangay documents. It helps reduce manual workload for staff while improving accessibility and communication between residents and the barangay office.",
