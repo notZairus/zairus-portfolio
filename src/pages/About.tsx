@@ -143,9 +143,7 @@ export default function About() {
               <br />
               <br />
               Outside of coding, I explore new tech stacks, improve my UI/UX
-              skills, and build side projects to grow my experience. I’m driven
-              by curiosity and a passion for creating meaningful digital
-              products.
+              skills, and build side projects to grow my experience.
             </p>
           </div>
           {/* <div className="flex-1">
