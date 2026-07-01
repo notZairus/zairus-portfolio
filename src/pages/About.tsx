@@ -71,7 +71,7 @@ const skills: Skill[] = [
     icon: <SiShadcnui size={36} />,
   },
   {
-    name: "Framer Motion",
+    name: "Motion",
     icon: <SiFramer size={36} />,
   },
   {
@@ -135,10 +135,10 @@ export default function About() {
         </h2>
         <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between mt-8 gap-8">
           <div className="flex-1 text-md">
-            <p className="tracking-wide text-xl">
-              I am <strong>Zairus Bermillo</strong>, a web developer from the{" "}
+            <p className="tracking-wide text-xl ">
+              I am <strong>Zairus Bermillo</strong>, a web developer from
               <strong>Philippines</strong> focused on building responsive and
-              practical web applications. I enjoy working on both{" "}
+              practical web applications. I enjoy working on both
               <strong>frontend and backend development</strong>.
               <br />
               <br />
