@@ -1,224 +1,205 @@
-import Dot from '@/components/Dot'
-import { SiJavascript, SiTypescript, SiReact, SiHtml5, SiCss3, SiTailwindcss, SiShadcnui, SiFramer, SiPhp, SiLaravel, SiPython, SiFirebase, SiMysql, SiSqlite, SiFlask } from "react-icons/si";
-import SkillHoverCard from '@/components/SkillHoverCard';
+import Dot from "@/components/Dot";
+import {
+  SiJavascript,
+  SiTypescript,
+  SiReact,
+  SiHtml5,
+  SiCss3,
+  SiTailwindcss,
+  SiShadcnui,
+  SiFramer,
+  SiPhp,
+  SiLaravel,
+  SiPython,
+  SiFirebase,
+  SiMysql,
+  SiSqlite,
+  SiFlask,
+} from "react-icons/si";
+import SkillHoverCard from "@/components/SkillHoverCard";
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
-
-
+import { GitHubCalendar } from "react-github-calendar";
 
 type Skill = {
-  name: string,
-  icon: React.ReactNode
-}
-
+  name: string;
+  icon: React.ReactNode;
+};
 
 const InViewVariant: Variants = {
-  'initial': {
+  initial: {
     opacity: 0,
-    y: 64
+    y: 64,
   },
-  'animate': {
+  animate: {
     opacity: 1,
     y: 0,
     transition: {
       duration: 0.5,
-      ease: 'easeInOut',
-    }
+      ease: "easeInOut",
+    },
   },
-}
+};
 
-
-const frontendSkills: Skill[] = [
+const skills: Skill[] = [
   {
-    name: 'HTML',
-    icon: <SiHtml5 size={36} />
+    name: "HTML",
+    icon: <SiHtml5 size={36} />,
   },
   {
-    name: 'CSS',
-    icon: <SiCss3 size={36} />
+    name: "CSS",
+    icon: <SiCss3 size={36} />,
   },
   {
-    name: 'JavaScript',
-    icon: <SiJavascript size={36} />
+    name: "JavaScript",
+    icon: <SiJavascript size={36} />,
   },
   {
-    name: 'TypeScript',
-    icon: <SiTypescript size={36} />
+    name: "TypeScript",
+    icon: <SiTypescript size={36} />,
   },
   {
-    name: 'React',
-    icon: <SiReact size={36} />
+    name: "React",
+    icon: <SiReact size={36} />,
   },
   {
-    name: 'TailwindCSS',
-    icon: <SiTailwindcss size={36} />
+    name: "TailwindCSS",
+    icon: <SiTailwindcss size={36} />,
   },
   {
-    name: 'ShadCN',
-    icon: <SiShadcnui size={36} />
+    name: "ShadCN",
+    icon: <SiShadcnui size={36} />,
   },
   {
-    name: 'Framer Motion',
-    icon: <SiFramer size={36} />
-  }
-]
-
-const backendSkills: Skill[] = [
-  {
-    name: 'PHP',
-    icon: <SiPhp size={36} />
+    name: "Framer Motion",
+    icon: <SiFramer size={36} />,
   },
   {
-    name: 'Python',
-    icon: <SiPython size={36} />
+    name: "PHP",
+    icon: <SiPhp size={36} />,
   },
   {
-    name: 'Firebase',
-    icon: <SiFirebase size={36} />
+    name: "Python",
+    icon: <SiPython size={36} />,
   },
   {
-    name: 'Laravel',
-    icon: <SiLaravel size={36} />
+    name: "Firebase",
+    icon: <SiFirebase size={36} />,
   },
   {
-    name: 'Flask',
-    icon: <SiFlask size={36} />
-  }
-]
-
-const databaseSkills: Skill[] = [
+    name: "Laravel",
+    icon: <SiLaravel size={36} />,
+  },
   {
-    name: 'MySQL',
+    name: "Flask",
+    icon: <SiFlask size={36} />,
+  },
+  {
+    name: "MySQL",
     icon: <SiMysql size={36} />,
   },
   {
-    name: 'SQLite',
+    name: "SQLite",
     icon: <SiSqlite size={36} />,
   },
-]
-
+];
 
 export default function About() {
   return (
-    <div className='text-white py-20 lg:px-20 scrollbar-hidden'>
+    <div className="text-white py-20 lg:px-20 scrollbar-hidden">
       <motion.div
         initial={{ opacity: 0 }}
-        animate={{ opacity: 1}}
+        animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
       >
-        <h1 
-          className='text-5xl lg:text-6xl font-black'>
-          About me<Dot />
+        <h1 className="text-5xl lg:text-6xl font-black">
+          About me
+          <Dot />
         </h1>
-        <p className='border-l-12 border-blue-400 text-xl lg:w-[800px] pl-2 mt-8'>Developing beautiful and functional website is my hobby, that’s why I always make sure my work is good quality.</p>
+        <p className="border-l-12 border-blue-400 text-xl lg:w-[800px] pl-2 mt-8">
+          Developing beautiful and functional website is my hobby, that’s why I
+          always make sure my work is good quality.
+        </p>
       </motion.div>
-      
-      <motion.section 
-        className='mt-40'
+
+      <motion.section
+        className="mt-20"
         variants={InViewVariant}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <h2 className=' text-4xl font-bold'>Who I am<Dot /></h2>
-        <div className='w-full flex flex-col-reverse lg:flex-row items-center justify-between mt-8 gap-8'>
-          <div className='flex-1 text-md'>
-            <p className='tracking-wide'>
-              I am <strong>Zairus Bermillo</strong>, a passionate web developer and aspiring full-stack developer from the <strong>Philippines</strong>. I like translating ideas into engaging and practical online applications. With a strong background in both <strong>frontend and backend development</strong>, I create clean, responsive interfaces and <strong>robust server-side logic</strong>.<br />
+        <h2 className=" text-4xl font-bold">
+          Who I am
+          <Dot />
+        </h2>
+        <div className="w-full flex flex-col-reverse lg:flex-row items-center justify-between mt-8 gap-8">
+          <div className="flex-1 text-md">
+            <p className="tracking-wide text-xl">
+              I am <strong>Zairus Bermillo</strong>, a web developer from the{" "}
+              <strong>Philippines</strong> focused on building responsive and
+              practical web applications. I enjoy working on both{" "}
+              <strong>frontend and backend development</strong>.
               <br />
-              When I'm not coding, I'm usually browsing new tech stacks, honing my UI/UX design abilities, or working on side projects to stretch my imagination. I'm dedicated to continuous improvement, whether through solo projects, open-source contributions, or collaboration with peers.<br />
               <br />
-              Inspired by curiosity and coffee, I want to build meaningful digital experiences that are not just attractive, but also impactful.<br />
+              Outside of coding, I explore new tech stacks, improve my UI/UX
+              skills, and build side projects to grow my experience. I’m driven
+              by curiosity and a passion for creating meaningful digital
+              products.
             </p>
           </div>
-          <div className='flex-1'>
-            <div className='bg-white w-full lg:w-[360px]  ml-auto rounded overflow-hidden object-cover'>
+          {/* <div className="flex-1">
+            <div className="bg-white w-full lg:w-[360px]  ml-auto rounded overflow-hidden object-cover">
               <img src="/zairus.jpg" alt="" />
             </div>
-          </div>
+          </div> */}
         </div>
       </motion.section>
 
-      <motion.section 
-        className='mt-40'
+      <motion.section
+        className="mt-20"
         variants={InViewVariant}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <h2 className='font-bold text-4xl'>Services I can offer<Dot/></h2>
-        <div className='mt-8 flex gap-8 w-full flex-wrap'>
-
-          <div className='grow shrink-0 w-1/5 min-w-[200px]'>
-            <h3 className='text-2xl font-semibold'>Frontend Development</h3>
-            <p className='mt-4 tracking-wide'>
-              I specialize in building responsive and accessible user interfaces using HTML, CSS, JavaScript, and modern frameworks like React and Vue. Whether it’s a static website or a complex single-page application, I ensure a smooth, intuitive user experience across all devices.  
-            </p>
+        <h2 className="text-4xl font-bold">
+          Stack
+          <Dot />
+        </h2>
+        <div className="mt-8 space-y-6">
+          <div>
+            <div className="mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 w-full gap-4">
+              {skills.map((skill) => (
+                <SkillHoverCard name={skill.name} icon={skill.icon} />
+              ))}
+            </div>
           </div>
-
-          <div className='grow shrink-0 w-1/5 min-w-[200px]'>
-            <h3 className='text-2xl font-semibold'>Backend Development</h3>
-            <p className='mt-4 tracking-wide'>
-              I build secure and efficient server-side applications using Node.js, PHP, or Python. I can create RESTful APIs, manage authentication systems, handle databases, and deploy scalable applications that support business logic and client needs.            </p>
-          </div>
-
-          <div className='grow shrink-0 w-1/5 min-w-[200px]'>
-            <h3 className='text-2xl font-semibold'>Api Integration</h3>
-            <p className='mt-4 tracking-wide'>
-              I integrate third-party APIs and develop custom APIs to extend your application's functionality. From payment gateways like Stripe and PayPal to social login systems and data services, I ensure smooth and secure communication between services.
-            </p>
-          </div>
-
-          <div className='grow shrink-0 w-1/5 min-w-[200px]'>
-            <h3 className='text-2xl font-semibold'>Database Management</h3>
-            <p className='mt-4 tracking-wide'>
-              I design, optimize, and maintain databases using MySQL, PostgreSQL, or MongoDB. I ensure data integrity, write efficient queries, and manage backups and migrations, supporting your application with a solid and secure data foundation.
-            </p>
-          </div>
-
         </div>
       </motion.section>
 
-      <motion.section 
-        className='mt-40'
+      <motion.section
+        className="mt-20"
         variants={InViewVariant}
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
       >
-        <h2 className='text-4xl font-bold'>Skills<Dot /></h2>
-        <div className='mt-8 space-y-6'>
-
-          <div>
-            <h3 className='text-2xl font-semibold'>Frontend Skills</h3>
-            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 w-full gap-4'>
-              {
-                frontendSkills.map((skill) => <SkillHoverCard name={skill.name} icon={skill.icon}/>)
-              }
-            </div>
+        <h2 className="text-4xl font-bold">
+          Github Activity
+          <Dot />
+        </h2>
+        <div className="mt-8 space-y-6 ">
+          <div className="px-4 py-8 border rounded-xl border-blue-400/50 flex items-center justify-center">
+            <GitHubCalendar
+              username="notZairus"
+              theme={{
+                dark: ["#2f2f2f60", "#312e81", "#5b21b6", "#7c3aed", "#a855f7"],
+              }}
+            />
           </div>
-
-          <div>
-            <h3 className='text-2xl font-semibold'>Backend Skills</h3>
-            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 w-full gap-4'>
-              {
-                backendSkills.map((skill) => <SkillHoverCard name={skill.name} icon={skill.icon}/>)
-              }
-            </div>
-          </div>
-
-          <div>
-            <h3 className='text-2xl font-semibold'>Database Skills</h3>
-            <div className='mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 w-full gap-4'>
-              {
-                databaseSkills.map((skill) => <SkillHoverCard name={skill.name} icon={skill.icon}/>)
-              }
-            </div>
-          </div>
-
         </div>
       </motion.section>
-    
     </div>
-  )
+  );
 }

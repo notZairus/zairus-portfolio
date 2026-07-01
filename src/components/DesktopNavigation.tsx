@@ -1,12 +1,19 @@
-import NavButton from "./NavButton"
+import NavButton from "./NavButton";
 
 export default function DesktopNavigation() {
   return (
-    <nav className='hidden lg:block md:block min-w-20 min-h-5 bg-[#2F2F2F] border border-white/15 space-x-12 px-12 py-2 rounded-lg text-white font-semibold'>
-        <NavButton path="/">Home</NavButton>
-        <NavButton path="/about">About</NavButton>
-        <NavButton path="/projects">Projects</NavButton>
-        <NavButton path="/contact">Contact</NavButton>
+    <nav
+      className="hidden md:flex lg:flex items-center gap-8 px-8 py-2 rounded-xl 
+bg-[#2F2F2F]/80 backdrop-blur-md border border-white/10 
+shadow-md text-white font-medium"
+    >
+      <NavButton path="/">Home</NavButton>
+
+      <NavButton path="/about">About</NavButton>
+
+      <NavButton path="/projects">Projects</NavButton>
+
+      <NavButton path="/contact">Contact</NavButton>
     </nav>
-  )
+  );
 }
