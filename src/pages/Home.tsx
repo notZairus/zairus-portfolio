@@ -16,7 +16,7 @@ export default function Home() {
     <>
       <ParticleBackground />
 
-      <div className="w-full h-full flex items-center flex-col justify-center text-white absolute z-10 top-0 left-0">
+      <div className="w-full h-full flex items-center flex-col justify-center text-white absolute z-10 top-0 left-0 sm:pt-4 pt-20">
         <motion.div
           className="aspect-square w-36 rounded-full bg-white overflow-hidden border"
           initial={{ scale: 0 }}

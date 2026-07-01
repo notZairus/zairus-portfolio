@@ -106,7 +106,7 @@ const skills: Skill[] = [
 
 export default function About() {
   return (
-    <div className="text-white py-20 lg:px-20 scrollbar-hidden">
+    <div className="text-white scrollbar-hidden">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

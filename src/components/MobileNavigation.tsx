@@ -1,33 +1,28 @@
-import {
-  Sheet,
-  SheetContent,
-  SheetTrigger,
-} from "@/components/ui/sheet"
-import { IoMenu } from "react-icons/io5"
-import NavButton from "./NavButton"
-
+import NavButton from "./NavButton";
+import { House, Info, BriefcaseBusiness, Send } from "lucide-react";
 
 export default function MobileNavigation() {
   return (
-    <div className="md:hidden">
-      <Sheet>
-        <SheetTrigger asChild>
-            <IoMenu color="white" size={36} />
-        </SheetTrigger>
-        
-        <SheetContent 
-          className="bg-[#222222] text-white border-l-white/20 w-[240px] pb-4" 
-          heading="Navigations"
-          
-        >
-          <nav className="flex flex-col text-xl px-4 space-y-2">
-            <NavButton path="/">Home</NavButton>
-            <NavButton path="/about">About</NavButton>
-            <NavButton path="/projects">Projects</NavButton>
-            <NavButton path="/contact">Contact</NavButton>
-          </nav>
-        </SheetContent>
-      </Sheet>
-    </div>
-  )
+    <nav
+      className="flex md:hidden items-center gap-8 px-8 py-4 rounded-xl 
+    bg-[#2F2F2F]/50 backdrop-blur-md border border-white/10 
+    shadow-md text-white font-medium"
+    >
+      <NavButton path="/">
+        <House />
+      </NavButton>
+
+      <NavButton path="/about">
+        <Info />
+      </NavButton>
+
+      <NavButton path="/projects">
+        <BriefcaseBusiness />
+      </NavButton>
+
+      <NavButton path="/contact">
+        <Send />
+      </NavButton>
+    </nav>
+  );
 }
