@@ -11,9 +11,9 @@ export default function Layout() {
   }, [pathname]);
 
   return (
-    <div className="w-full h-dvh min-h-dvh flex flex-col bg-primary pt-20 scrollbar-hidden">
+    <div className="w-full h-dvh min-h-dvh  flex flex-col bg-background pt-20 scrollbar-hidden">
       <Header />
-      <main className="w-full flex-1 bg-primary px-4 py-8 sm:p-20 scrollbar-hidden">
+      <main className="w-full flex-1  px-4 py-8 sm:py-20 sm:px-40 scrollbar-hidden">
         <Outlet />
       </main>
     </div>

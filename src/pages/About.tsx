@@ -1,22 +1,18 @@
 import Dot from "@/components/Dot";
 import {
-  SiJavascript,
+  SiFigma,
   SiTypescript,
   SiReact,
-  SiHtml5,
-  SiCss3,
   SiTailwindcss,
-  SiShadcnui,
-  SiFramer,
-  SiPhp,
-  SiLaravel,
-  SiPython,
-  SiFirebase,
   SiMysql,
-  SiSqlite,
-  SiFlask,
+  SiMongodb,
+  SiNextdotjs,
+  SiPrisma,
+  SiGit,
+  SiNodedotjs,
+  SiSupabase,
+  SiDocker,
 } from "react-icons/si";
-import SkillHoverCard from "@/components/SkillHoverCard";
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
 import { GitHubCalendar } from "react-github-calendar";
@@ -24,6 +20,7 @@ import { GitHubCalendar } from "react-github-calendar";
 type Skill = {
   name: string;
   icon: React.ReactNode;
+  description?: string;
 };
 
 const InViewVariant: Variants = {
@@ -43,66 +40,129 @@ const InViewVariant: Variants = {
 
 const skills: Skill[] = [
   {
-    name: "HTML",
-    icon: <SiHtml5 size={36} />,
-  },
-  {
-    name: "CSS",
-    icon: <SiCss3 size={36} />,
-  },
-  {
-    name: "JavaScript",
-    icon: <SiJavascript size={36} />,
+    name: "Figma",
+    icon: <SiFigma size={24} />,
+    description: "Design Tool",
   },
   {
     name: "TypeScript",
-    icon: <SiTypescript size={36} />,
+    icon: <SiTypescript size={24} />,
+    description: "Javascript but better",
+  },
+  {
+    name: "NextJS",
+    icon: <SiNextdotjs size={24} />,
+    description: "React Framework",
   },
   {
     name: "React",
-    icon: <SiReact size={36} />,
+    icon: <SiReact size={24} />,
+    description: "JavaScript Library",
   },
   {
     name: "TailwindCSS",
-    icon: <SiTailwindcss size={36} />,
+    icon: <SiTailwindcss size={28} />,
+    description: "CSS Framework",
   },
   {
-    name: "ShadCN",
-    icon: <SiShadcnui size={36} />,
+    name: "Git",
+    icon: <SiGit size={24} />,
+    description: "Version Control",
   },
   {
-    name: "Motion",
-    icon: <SiFramer size={36} />,
+    name: "Docker",
+    icon: <SiDocker size={24} />,
+    description: "Containerization",
   },
   {
-    name: "PHP",
-    icon: <SiPhp size={36} />,
+    name: "NodeJS",
+    icon: <SiNodedotjs size={24} />,
+    description: "JavaScript Runtime",
   },
   {
-    name: "Python",
-    icon: <SiPython size={36} />,
+    name: "Supabase",
+    icon: <SiSupabase size={24} />,
+    description: "Backend as a Service",
   },
   {
-    name: "Firebase",
-    icon: <SiFirebase size={36} />,
-  },
-  {
-    name: "Laravel",
-    icon: <SiLaravel size={36} />,
-  },
-  {
-    name: "Flask",
-    icon: <SiFlask size={36} />,
+    name: "Prisma ORM",
+    icon: <SiPrisma size={24} />,
+    description: "Database ORM",
   },
   {
     name: "MySQL",
-    icon: <SiMysql size={36} />,
+    icon: <SiMysql size={24} />,
+    description: "Sql Database",
   },
   {
-    name: "SQLite",
-    icon: <SiSqlite size={36} />,
+    name: "MongoDB",
+    icon: <SiMongodb size={24} />,
+    description: "NoSQL Database",
   },
 ];
+
+// const skills2: Skill[] = [
+//   {
+//     name: "HTML",
+//     icon: <SiHtml5 size={36} />,
+//   },
+//   {
+//     name: "CSS",
+//     icon: <SiCss3 size={36} />,
+//   },
+//   {
+//     name: "JavaScript",
+//     icon: <SiJavascript size={36} />,
+//   },
+//   {
+//     name: "TypeScript",
+//     icon: <SiTypescript size={36} />,
+//   },
+//   {
+//     name: "React",
+//     icon: <SiReact size={36} />,
+//   },
+//   {
+//     name: "TailwindCSS",
+//     icon: <SiTailwindcss size={36} />,
+//   },
+//   {
+//     name: "ShadCN",
+//     icon: <SiShadcnui size={36} />,
+//   },
+//   {
+//     name: "Motion",
+//     icon: <SiFramer size={36} />,
+//   },
+//   {
+//     name: "PHP",
+//     icon: <SiPhp size={36} />,
+//   },
+//   {
+//     name: "Python",
+//     icon: <SiPython size={36} />,
+//   },
+//   {
+//     name: "Firebase",
+//     icon: <SiFirebase size={36} />,
+//   },
+//   {
+//     name: "Laravel",
+//     icon: <SiLaravel size={36} />,
+//   },
+//   {
+//     name: "Flask",
+//     icon: <SiFlask size={36} />,
+//   },
+//   {
+//     name: "MySQL",
+//     icon: <SiMysql size={36} />,
+//   },
+//   {
+//     name: "SQLite",
+//     icon: <SiSqlite size={36} />,
+//   },
+// ];
 
 export default function About() {
   return (
@@ -167,9 +227,15 @@ export default function About() {
         </h2>
         <div className="mt-8 space-y-6">
           <div>
-            <div className="mt-4 grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 xl:grid-cols-10 w-full gap-4">
+            <div className="mt-4 w-full flex items-start gap-2 flex-wrap">
               {skills.map((skill) => (
-                <SkillHoverCard name={skill.name} icon={skill.icon} />
+                <motion.div className="flex items-center border border-white/4 bg-white/4 hover:border hover:border-white/12 transition-all duration-300 hover:bg-white/8 px-4 py-3 rounded-lg gap-4 flex-1 min-w-[200px] sm:grow-0">
+                  <div>{skill.icon}</div>
+                  <div>
+                    <p className="text-sm font-semibold">{skill.name}</p>
+                    <p className="text-gray-400 text-xs">{skill.description}</p>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
