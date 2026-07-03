@@ -28,7 +28,7 @@ export default function Projects() {
         </p>
       </motion.div>
 
-      <section className="grid grid-cols-1 md:grid-cols-2 auto-rows-[148px] md:auto-rows-[120px] md:gap-x-10 gap-y-8 md:gap-y-10 md:mt-20">
+      <section className="-mt-16 grid grid-cols-1 md:grid-cols-2 auto-rows-[148px] md:auto-rows-[120px] md:gap-x-10 gap-y-8 md:gap-y-10 md:mt-20">
         <div></div>
         {projects.map((project, index) => (
           <motion.div
