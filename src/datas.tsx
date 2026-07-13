@@ -10,6 +10,34 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    name: "MonoSpace",
+    description:
+      "A web app that combines task, notes, and pomodoro feature in one single dashboard.",
+    features: [
+      "Task Management: Add, update, delete, or complete task easily with the use of user friendly task panel",
+      "Subtasks: Break down tasks into smaller, manageable subtasks for better organization and tracking.",
+      "Intelligent Note-Taking: Type notes manually or extract them automatically from files (.pdf, .docx, .xlsx, .pptx) powered by Apache Tika and Gemini.",
+      "Configurable Pomodoro Timer: Improve focus using the built-in pomodoro timer. This pomodoro timer lets user configure the duration of work, short-breaks, and long-breaks.",
+    ],
+    technologyUsed: [
+      "NodeJS",
+      "Express",
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "ShadCN",
+      "Clerk",
+      "Prisma",
+      "SQLite",
+      "Gemini API",
+    ],
+    screenshotPaths: Array.from({ length: 10 }).map((_, index) => {
+      return `/project_screenshots/monospace/_${index + 1}.png`;
+    }),
+    githubRepo: "https://github.com/notZairus/MonoSpace",
+    livePreviewUrl: "https://monospace-alpha.vercel.app",
+  },
+  {
     name: "Jienelle Portfolio",
     description:
       "A personal portfolio website for Jienelle, a Computer Science student. Showcases her design projects, skills, and experience with a clean and modern interface.",
