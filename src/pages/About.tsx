@@ -101,69 +101,6 @@ const skills: Skill[] = [
   },
 ];
 
-// const skills2: Skill[] = [
-//   {
-//     name: "HTML",
-//     icon: <SiHtml5 size={36} />,
-//   },
-//   {
-//     name: "CSS",
-//     icon: <SiCss3 size={36} />,
-//   },
-//   {
-//     name: "JavaScript",
-//     icon: <SiJavascript size={36} />,
-//   },
-//   {
-//     name: "TypeScript",
-//     icon: <SiTypescript size={36} />,
-//   },
-//   {
-//     name: "React",
-//     icon: <SiReact size={36} />,
-//   },
-//   {
-//     name: "TailwindCSS",
-//     icon: <SiTailwindcss size={36} />,
-//   },
-//   {
-//     name: "ShadCN",
-//     icon: <SiShadcnui size={36} />,
-//   },
-//   {
-//     name: "Motion",
-//     icon: <SiFramer size={36} />,
-//   },
-//   {
-//     name: "PHP",
-//     icon: <SiPhp size={36} />,
-//   },
-//   {
-//     name: "Python",
-//     icon: <SiPython size={36} />,
-//   },
-//   {
-//     name: "Firebase",
-//     icon: <SiFirebase size={36} />,
-//   },
-//   {
-//     name: "Laravel",
-//     icon: <SiLaravel size={36} />,
-//   },
-//   {
-//     name: "Flask",
-//     icon: <SiFlask size={36} />,
-//   },
-//   {
-//     name: "MySQL",
-//     icon: <SiMysql size={36} />,
-//   },
-//   {
-//     name: "SQLite",
-//     icon: <SiSqlite size={36} />,
-//   },
-// ];
-
 export default function About() {
   return (
     <div className="text-white scrollbar-hidden">
