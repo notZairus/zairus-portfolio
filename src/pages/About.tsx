@@ -15,7 +15,6 @@ import {
 } from "react-icons/si";
 import { motion } from "motion/react";
 import type { Variants } from "motion/react";
-import { GitHubCalendar } from "react-github-calendar";
 
 type Skill = {
   name: string;

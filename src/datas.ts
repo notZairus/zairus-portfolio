@@ -10,6 +10,33 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    name: "ArcHone: Command-Line Based Code Analyzer",
+    description:
+      "A code quality tool that helps students identify and understand code smells in JavaScript, Python, and C# files. Instructors can review saved analyses and provide feedback through a web dashboard.",
+    features: [
+      "Code Smell Detection: Find issues such as unused variables, duplicate code, and deeply nested logic.",
+      "Issue Explanations: Understand why each flagged practice can make code harder to read or maintain.",
+      "Line Identification: See the line numbers where issues occur so you can find them quickly.",
+      "Code Quality Assessment: Get an overall assessment of your code based on the issues detected.",
+      "Instructor Dashboard: Review saved analysis results, inspect the analyzed source code, and leave feedback for students.",
+    ],
+    technologyUsed: [
+      "Node.js",
+      "WebAssembly",
+      "Tree-sitter",
+      "Blessed",
+      "React",
+      "TypeScript",
+      "Chart.js",
+      "AppWrite",
+      "MariaDB",
+    ],
+    screenshotPaths: Array.from({ length: 15 }).map((_, index) => {
+      return `/project_screenshots/archone/_${index + 1}.png`;
+    }),
+    livePreviewUrl: "https://archone.dev",
+  },
+  {
     name: "AIDE: No Code Chatbot Builder",
     description:
       "A no code chatbot builder platform. Users can create grounded base chatbots within a minute and embed it in their own website.",

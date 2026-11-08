@@ -29,8 +29,7 @@ export default function Home() {
           animate={{ opacity: 1 }}
           transition={{ duration: 2, type: "spring" }}
         >
-          <p className="mt-4 text-center">Hello, I'm Zairus Bermillo</p>
-          {/* <h1 className='text-5xl lg:text-6xl mt-4 font-black text-center'>Full Stack Developer</h1> */}
+          <p className="mt-8 text-[1.4rem] font-semibold text-center">Hello, I'm Zairus Bermillo</p>
           <h1 className="md:h-min h-[96px] text-5xl lg:text-6xl mt-4 font-black text-center">
             <ReactTyped
               typeSpeed={80}

@@ -58,13 +58,13 @@ export default function Projects() {
                 scale: 1.05,
               }}
             />
-            <div className="absolute inset-0 w-full bg-gradient-to-t from-black/45 to-black/10 transition-colors duration-300 hover:from-black/60 hover:to-black/20">
+            <div className="absolute inset-0 w-full bg-gradient-to-t from-black/55 to-black/10 transition-colors duration-300 hover:from-black/60 hover:to-black/20">
               <div className="absolute bottom-4 w-full px-4 py-2">
                 <div className="space-y-2">
-                  <p className="text-2xl font-semibold max-w-full break-words">
+                  <p className="text-2xl font-semibold max-w-full">
                     {project.name}
                   </p>
-                  <p className="hidden md:block max-w-full break-words overflow-hidden whitespace-nowrap text-ellipsis">
+                  <p className="line-clamp-2 max-w-full ">
                     {project.description}
                   </p>
                 </div>
