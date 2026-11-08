@@ -179,7 +179,7 @@ export default function About() {
         </div>
       </motion.section>
 
-      <motion.section
+      {/* <motion.section
         className="mt-20"
         variants={InViewVariant}
         initial="initial"
@@ -200,7 +200,7 @@ export default function About() {
             />
           </div>
         </div>
-      </motion.section>
+      </motion.section> */}
     </div>
   );
 }

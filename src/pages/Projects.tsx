@@ -22,7 +22,7 @@ export default function Projects() {
           <Dot />
         </h1>
         <p className="border-l-12 border-blue-400 text-xl lg:w-[800px] pl-2 mt-8">
-          Here are my projects that showcase my ability to build beautiful and
+          Here are my projects that showcase my ability to build responsive and
           functional websites, and reflect the effort I put into improving with
           every creation.
         </p>

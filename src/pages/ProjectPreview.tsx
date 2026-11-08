@@ -20,7 +20,7 @@ export default function ProjectPreview() {
   return (
     <div className="text-white py-4 lg:px-20 scrollbar-hidden mb-12">
       <motion.div
-        className="mx-auto w-full md:w-2/3 overflow-hidden relative"
+        className="mx-auto w-full md:w-5/6 overflow-hidden relative"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1 }}
@@ -86,7 +86,7 @@ export default function ProjectPreview() {
                 <h2 className="text-2xl font-semibold mb-2">Features</h2>
                 <ul className="list-disc list-inside text-sm space-y-1">
                   {project.features.map((feature, idx) => (
-                    <li key={idx}>{feature}</li>
+                    <li key={idx} className="text-lg">{feature}</li>
                   ))}
                 </ul>
               </div>

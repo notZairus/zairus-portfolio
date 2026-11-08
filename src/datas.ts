@@ -10,6 +10,31 @@ type Project = {
 
 export const projects: Project[] = [
   {
+    name: "AIDE: No Code Chatbot Builder",
+    description:
+      "A no code chatbot builder platform. Users can create grounded base chatbots within a minute and embed it in their own website.",
+    features: [
+      "Chatbot Creation: Create a grounded, and customizable chatbot that you can embed on your own website.",
+      "Grounded-Base: The chatbot will only get answer on the information that you provide.",
+      "RAG: Utilizes Retrieval-Augmented Generation to keep the answer grounded to the given inforrmation and avoid hallucination.",
+      "Embeddable: Make the chatbot you create appear in your website by pasting one single code snippet.",
+      "Customizable: You can customize your chatbot’s colors, name, description, and image to match your website.,"
+    ],
+    technologyUsed: [
+      "React",
+      "TypeScript",
+      "TailwindCSS",
+      "Supabase",
+      "PostgreSQL",
+      "pgvector",
+      "OpenAI",
+    ],
+    screenshotPaths: Array.from({ length: 10 }).map((_, index) => {
+      return `/project_screenshots/aide/_${index + 1}.png`;
+    }),
+    livePreviewUrl: "https://se-102.vercel.app",
+  },
+  {
     name: "MonoSpace",
     description:
       "A web app that combines task, notes, and pomodoro feature in one single dashboard.",
@@ -250,36 +275,6 @@ export const projects: Project[] = [
     livePreviewUrl: "https://quizzital.vercel.app",
     githubRepo: "https://github.com/notZairus/Quizzital_V2",
   },
-
-  {
-    name: "FoodIfAi",
-    description:
-      "An AI-powered web app that analyzes food and generates recipes using image recognition and ingredient input. Designed for health-conscious users and food explorers.",
-    features: [
-      "Take a picture of food using your camera for instant analysis",
-      "Generate creative and healthy recipes from input ingredients",
-      "View estimated calories and nutrition facts",
-      "Suggest healthier alternatives for unhealthy ingredients",
-      "Recognizes common Filipino dishes and ingredients",
-      "Save favorite recipes locally (via browser)",
-      "Dark mode toggle for user comfort",
-      "Fully responsive and mobile-friendly UI",
-    ],
-    technologyUsed: [
-      "React",
-      "JavaScript",
-      "TailwindCSS",
-      "Gemini API",
-      "Web APIs (Camera, Video)",
-    ],
-    screenshotPaths: Array.from({ length: 8 }).map((_) => {
-      // return `/project_screenshots/food_if_ai/_${index+1}.png`;
-      return "https://imgs.search.brave.com/eJAg4n20nh_hk4T2ST3fOHd1gykrvsnmke9QIzaRTbI/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/bWFndHJvbC5jb20v/ZnJhbmNlL3dwLWNv/bnRlbnQvdXBsb2Fk/cy9wbGFjZWhvbGRl/ci0xNi05LXJhdGlv/LTMwMHgxNjkucG5n";
-    }),
-    livePreviewUrl: "https://food-if-ai.vercel.app",
-    githubRepo: "https://github.com/notZairus/FoodIfAi",
-  },
-
   {
     name: "Adam's Ice Cream POS",
     description:
@@ -303,10 +298,3 @@ export const projects: Project[] = [
     githubRepo: "sad",
   },
 ];
-
-// 1. ice cream pos
-// 2. quizzital (quiz taking app with ai quiz generation)
-// 3. FoodIfAi (ai food analysis and recipe generator)
-// 4. SnapStrip (simple photoshoot web app)
-// 5. pomolog (pomodoro with logging and history feature)
-// 6. baranggay request document system

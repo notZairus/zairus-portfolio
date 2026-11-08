@@ -5,10 +5,8 @@ import { ReactTyped } from "react-typed";
 
 export default function Home() {
   function downloadCV() {
-    let anchor = document.createElement("a");
-    anchor.href =
-      "https://imgs.search.brave.com/dZYxA1nQLswOiHZM0Mn5TLQBSlbGwD81TNnEazTAgiA/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/ZnJlZS12ZWN0b3Iv/Y3VycmljdWx1bS12/aXRhZS1vbmxpbmUt/d2l0aC1jaGFyYWN0/ZXItYXZhdGFyXzIz/LTIxNDg1NjQ2OTEu/anBnP3Q9c3Q9MTc0/OTA1NDc2Nn5leHA9/MTc0OTA1ODM2Nn5o/bWFjPTgwNDk2NWU4/OTc0OTMwZTU3YjMz/ZjY3N2U5MmYzMjM0/ODc5NjVhNDU4NzVi/NTcwOTBiMjQzMjNi/OGVkYTc2MWI";
-    anchor.target = "_blank";
+    const anchor = document.createElement("a");
+    anchor.href = "/Zairus%20Resume.pdf";
     anchor.click();
   }
 
